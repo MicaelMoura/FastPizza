@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --primaryColor: #931818;
+    --primaryColorAlfa: #931818d7;
+    --secondColor: #F3F3F3;
+    --bg: #010103;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem; /*Ao clicar em um link que faz scroll, deixa um paddin-top de 9rem*/
+    scroll-behavior: smooth; /*faz o link para a mesma página correr de forma mais suave*/
+}
+
+/***Modificando a barra de rolagem***/
+/*Largura da barra*/
+html::-webkit-scrollbar{
+    width: .3rem;
+}
+
+/*Cor do espaço não preenchido - O espaço que pode ser percorrido*/
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/*Barra em si*/
+html::-webkit-scrollbar-thumb{
+    background: var(--bg);
+    border-radius: 5rem;
+}
+/*Cor da barra hover*/
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primaryColor); 
+  }
+
+/*****/
+
+body{
+    background: var(--bg);
+}
+
+header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 0.1rem solid var(--primaryColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header .logo img{
+    height: 9rem;
+    /*
+    Ao diminuir a tela ou subir, diminuir para 6rem
+    se diminuir muito, mudar imagem para apenas logo sem nome
+    */
+}
+
+header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+header .navbar a:hover{
+    color: var(--primaryColor);
+    border-bottom: .1rem solid var(--primaryColor);
+    padding-bottom: .5rem;
+}
+
+header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    margin-left: 2rem;
+}
+
+header .icons div:hover{
+    color:var(--primaryColor);
+}
+
+#menu-btn{
+    display: none;
+}
+
+header .login{
+    position: absolute;
+    top: 100%;
+    width: 30rem;
+    background-color: #fff;
+    right: -100%;
+    height: 100vh;
+}
+
+header .login.active{
+    right: 0;
+}
+
+header .login .user,
+header .login .pass,
+header .login .btn_entrar
+{
+    display: inline-block;
+    padding: 5px;
+    margin: 1rem;
+    width: 100%;
+}
+
+header .login .btn_entrar:hover
+{
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+header .login .user,
+header .login .pass
+{
+    border: 1px solid #010103;
+    border-radius: 0.5rem;
+}
+
+header .login .user:hover,
+header .login .pass:hover
+{
+    border-color: var(--primaryColor);
+}
+
+header .login .cadastro{
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+header .login .cadastro:hover{
+    color: var(--primaryColor);
+    cursor: pointer;
+    border-bottom: .1rem solid var(--primaryColor);
+    padding-bottom: .5rem;
+}
+
+header .form-login{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 55%;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: 100vh; /*100% do Viewport*/
+    }
+
+    header .navbar.active {
+        right: 0;
+    }
+
+    .navbar .active{
+        right: 0;
+    }
+
+    header .navbar a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:410px) {
+    header .logo img{
+        height: 6rem;
+    }
+}
