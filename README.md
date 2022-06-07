@@ -8,6 +8,6 @@
  * Criar um site 100% responsivo para qualquer tipo de dispositivo.
  * Integrar este projeto no meu portifólio.
  
- Para acessá-lo, [clique aqui](https://micaelmoura.github.io/FastPizza/)!
+ Após concluído adicionarei prints aqui!
  
  OBS.: Sinta-se à vontade para clonar o repositório para usá-lo da forma que desejar, criar issues e me ajudar a avoluir! ^^
